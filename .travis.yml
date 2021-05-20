@@ -1,11 +1,13 @@
 language: dart
-os: windows
-dart:
-  - stable
+dist: bionic
+addons:
+  apt:
+    packages:
+      - lib32stdc++6
 install:
   - git clone https://github.com/flutter/flutter.git -b stable --depth 1
   - export PATH=./flutter/bin:$PATH
-  - flutter doctor -v
+  - flutter doctor
   - flutter --version
 script:
   - flutter packages get
