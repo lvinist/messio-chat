@@ -1,9 +1,7 @@
 language: dart
 os: windows
-addons:
-  apt:
-    packages:
-      - lib32stdc++6
+dart:
+  stable
 install:
   - git clone https://github.com/flutter/flutter.git -b stable --depth 1
   - export PATH=./flutter/bin:$PATH
