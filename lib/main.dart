@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:messio/pages/converstationPageList.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(Messio());
 }
 
-class MyApp extends StatelessWidget {
+class Messio extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
