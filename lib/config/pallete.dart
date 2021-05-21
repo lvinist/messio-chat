@@ -14,4 +14,5 @@ class Pallete {
   static Color otherMessageColor = Color(0xff3f3f3f);
 
   static Color grey = Colors.grey;
+  static Color accentColor = Colors.teal;
 }
