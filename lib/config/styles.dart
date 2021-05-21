@@ -17,4 +17,5 @@ class Styles {
     color: Pallete.grey,
     fontSize: 12,
   );
+  static TextStyle textStyle = TextStyle(color: Pallete.primaryTextColorlight);
 }

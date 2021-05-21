@@ -10,6 +10,7 @@ class ConverstationBottomSheet extends StatefulWidget {
   @override
   _ConverstationBottomSheetState createState() =>
       _ConverstationBottomSheetState();
+ 
 }
 
 class _ConverstationBottomSheetState extends State<ConverstationBottomSheet> {
@@ -18,17 +19,31 @@ class _ConverstationBottomSheetState extends State<ConverstationBottomSheet> {
     return Container(
       child: Material(
         child: Scaffold(
+          backgroundColor: Colors.white,
           body: ListView(
             children: [
-              NavigationPill(),
-              Center(
-                child: Text(
-                  'Messages',
-                  style: Styles.textHeading,
+              GestureDetector(
+                child: ListView(
+                  shrinkWrap: true,
+                  physics: ClampingScrollPhysics(),
+                  children: [
+                    NavigationPill(),
+                    Center(
+                      child: Text(
+                        'Messages',
+                        style: Styles.textHeading,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                  ],
                 ),
-              ),
-              SizedBox(
-                height: 20,
+                onVerticalDragEnd: (details) {
+                  if (details.primaryVelocity > 50) {
+                    Navigator.pop(context);
+                  }
+                },
               ),
               ListView.separated(
                   shrinkWrap: true,

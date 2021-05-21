@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:messio/pages/converstationPageList.dart';
+import 'package:messio/pages/converstationPagesSlide.dart';
 
 void main() {
   runApp(Messio());
@@ -13,7 +13,7 @@ class Messio extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: ConverstationPageList(),
+      home: ConverstationPagesSlide(),
     );
   }
 }
